@@ -17,25 +17,120 @@
     grid-template-rows: repeat(3, 1fr);
     display:grid;
     place-content:center;
+    padding-top:15%;
     gap:10px;
     grid-area:img;
 }
 header{
+    
     background-color: bisque;
     background-image: url("O3.jpeg");
+    background-size: cover;
+     background-repeat: no-repeat;
+    background-position: center center;
     grid-area: hd;
+    text-align: center;
 }
 
 h1{
+    font: size 70px;
     background-color:lightgray;
     margin:0%;
     grid-area: h1;
 
 }
 a{
-    width:50px;
-    height:50px;
+    width:200px;
+    height:200px;
+    row-gap: 10px;
+    position:relative;
+   
+}
+img{
+    width:40%;
+   align-self: flex-end;
+    object-fit:contain;
     
-    background-color: blueviolet;
-    /* grid-area: img; */
+}
+.page header{
+    width: auto;
+    height: 100px;
+    background-image:none;
+    position:sticky;
+    top:5px;
+}
+.page{
+    background-size: 120% auto;
+    background-image: url(O3.jpeg);
+    background-attachment: fixed;
+    background-blend-mode: soft-light;
+    background-color:lightgray;
+
+}
+.container{
+    display:flex;
+    flex-direction:row;
+    gap:150px;
+    margin: 15% 25% 15% 20%;
+}
+p{
+    background-color: aquamarine;
+}
+.imageContainer{
+    display:flex;
+    flex-direction:column;
+    white-space: nowrap;
+    width:max-content;
+    gap:0%;
+    padding-left: 10%;
+    grid-area:pr;
+}
+.imageContainer img{
+    width:100%;
+    height: 500px;
+    align-self: flex-start;
+   object-fit: cover;
+   
+}
+.productWrap{
+    display:grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 300px 1fr;
+    grid-template-areas:
+    "hd hd"
+    "pr pri"
+
+}
+.product-secondary{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    min-height: 100vh;
+    position:sticky;
+    top:0px;
+    width:100%;
+    grid-area: pri;
+}
+a img{
+    width:100%;
+    object-fit:cover;
+}
+.content{
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    position:absolute;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.6s;
+}
+.content:hover{
+    opacity: 1;
+}
+.content h2{
+    color:azure;
 }
