@@ -3,11 +3,11 @@
     height:100vh;
     display:grid;
     grid-template-rows: 300px 75px auto;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-    "hd hd hd hd hd"
-    "h1 h1 h1 h1 h1"
-    "img img img img img"
+    "hd hd "
+    "h1 h1 "
+    "img img "
 
 }
 .subgrid{
@@ -16,9 +16,9 @@
     grid-template-columns:subgrid;
     grid-template-rows: repeat(3, 1fr);
     display:grid;
-    place-content:center;
+    justify-items:center;
     padding-top:15%;
-    gap:10px;
+    row-gap:20px;
     grid-area:img;
 }
 header{
@@ -34,14 +34,16 @@ header{
 
 h1{
     font: size 70px;
+    padding-top: 15px;
     background-color:lightgray;
     margin:0%;
     grid-area: h1;
+    text-align: center;
 
 }
 a{
-    width:200px;
-    height:200px;
+    width:300px;
+    height:300px;
     row-gap: 10px;
     position:relative;
    
@@ -111,9 +113,11 @@ p{
     width:100%;
     grid-area: pri;
 }
-a img{
+.image{
     width:100%;
-    object-fit:cover;
+    display: block;
+    margin:auto;
+    object-fit: contain;
 }
 .content{
     width:100%;
@@ -133,4 +137,7 @@ a img{
 }
 .content h2{
     color:azure;
+}
+.product{
+    justify-self: center;
 }
