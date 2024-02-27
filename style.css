@@ -11,15 +11,18 @@
 
 }
 .subgrid{
-    /* grid-column: 2/3;
-    grid-row: 3/4; */
-    grid-template-columns:subgrid;
-    grid-template-rows: repeat(3, 1fr);
+    width:100vw;
     display:grid;
-    justify-items:center;
-    padding-top:15%;
-    row-gap:20px;
-    grid-area:img;
+    grid-template-rows: minmax(1fr, auto);
+    grid-template-columns:1fr 100px 1fr;
+    grid-template-areas:
+    "L1 . L2 "
+    "L3 . L4 "
+    ". L5 . ";
+    justify-content: center;
+    justify-items: center;
+    row-gap:16%;
+    padding-top:5%;
 }
 header{
     
@@ -30,11 +33,19 @@ header{
     background-position: center center;
     grid-area: hd;
     text-align: center;
+    position:relative;
+}
+.headerContain {
+    width:100%;
+    position:fixed;
+    top:0;
 }
 
 h1{
-    font: size 70px;
-    padding-top: 15px;
+    font-size:60px;
+    color:azure;
+    font-family:'Myriad Pro', sans-serif; ;
+    /* padding-top: 15px; */
     background-color:lightgray;
     margin:0%;
     grid-area: h1;
@@ -42,8 +53,8 @@ h1{
 
 }
 a{
-    width:300px;
-    height:300px;
+    width:500px;
+    height:500px;
     row-gap: 10px;
     position:relative;
    
@@ -73,17 +84,24 @@ img{
     display:flex;
     flex-direction:row;
     gap:150px;
+    align-items:center;
     margin: 15% 25% 15% 20%;
 }
 p{
     background-color: aquamarine;
+    background-size: 200px;
+    text-align: left;
+    margin-top: 10px;
+    padding: 10%;
 }
 .imageContainer{
+    height:100vh;
     display:flex;
     flex-direction:column;
     white-space: nowrap;
     width:max-content;
     gap:0%;
+    overflow-y: scroll;
     padding-left: 10%;
     grid-area:pr;
 }
@@ -97,7 +115,7 @@ p{
 .productWrap{
     display:grid;
     grid-template-columns: 60% 40%;
-    grid-template-rows: 300px 1fr;
+    grid-template-rows: 100px 1fr;
     grid-template-areas:
     "hd hd"
     "pr pri"
@@ -140,4 +158,101 @@ p{
 }
 .product{
     justify-self: center;
+}
+.Link1{
+    grid-area:L1;
+}
+.Link2 {
+    grid-area: L2;
+
+}
+.Link3 {
+    grid-area: L3;
+    
+}
+.Link4 {
+    grid-area: L4;
+    
+}
+.Link5 {
+    grid-area: L5;
+    
+}
+.iconContainer {
+    height:40px;
+    width:100vw;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-items:end;
+    gap: 50px;
+    position:absolute;
+    bottom:0px;
+    right:15px;
+}
+.iconContainer img {
+    width:min-content;
+    height:inherit;
+    align-self:auto;
+    
+}
+.iconContainer h6{
+    text-align:left;
+    font-family:'Myriad Pro', sans-serif;
+    font-size:medium;
+    color: azure;
+    margin-block-start: 10px; 
+
+}
+@media only screen and (max-width:700px) {
+    .productWrap{
+        display:grid;
+        grid-template-columns: 1fr 40%;
+        grid-template-rows: 100px 1fr;
+        grid-template-areas:
+        "hd hd"
+        "pr pri"
+    
+    }
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x:hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+.sidenav a {
+    height:100px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+.sidenav .closebtn {
+    color:azure;
+    position: absolute;
+    top: 0;
+    font-size: 36px;
+    margin-left: 120px;
+  }
+.openbtn {
+    font-size:60px;
+    color:azure;
+    font-weight:bold;
+    position:absolute;
+    top:10px;
+    left:15px;
 }

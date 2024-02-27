@@ -7,8 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="page">
+  <div id="orSidenav" class="sidenav">
+    <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="p2.html">Material</a>
+    <a href="p3.html">Care Instruction</a>
+    <a href="p4.html">Shipping</a>
+    <a href="p5.html">Product</a>
+  </div>
+  
     <article>
         <header> 
+          <span class="openbtn" onclick="openNav()">&#8801</span>
             <a href="index.html">
                 <span>
                     <svg width= "201" height= "100"id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 547.37 211.98">
@@ -16,6 +25,7 @@
                           <style>
                             .cls-1 {
                               stroke-width: 0px;
+                              
                             }
                           </style>
                         </defs>
@@ -35,16 +45,26 @@
                         <path class="cls-1" d="M43.71,117.08c-.31.12-.63.2-.95.25l.4-.05c-.37.05-.75.05-1.12,0l.4.05c-.39-.05-.78-.16-1.14-.31l.36.15c-.32-.14-.63-.32-.91-.53l.3.23c-.09-.07-.17-.14-.25-.21-.58-.53-1.56-.62-2.12,0-.53.57-.62,1.56,0,2.12.77.69,1.71,1.22,2.74,1.4s2.11.17,3.1-.22c.38-.15.69-.33.9-.69.19-.32.27-.8.15-1.16s-.34-.71-.69-.9-.79-.3-1.16-.15h0Z"/>
                       </svg>
                 </span>
+                
             </a>
         </header>
         <div class="container">
-               <p>blahblahLorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Maecenas id 
-                leo id eros consectetur facilisis. Vestibulum vestibulum sapien id risus ultricies, at rutrum turpis malesuada. Nulla facilisi. Etiam vulputate aliquam lectus malesuada venenatis. Integer fringilla convallis convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis augue sem. Nunc non odio eget leo sagittis auctor nec quis enim. Maecenas consectetur nisl quis enim faucibus convallis. Donec sollicitudin eros non turpis facilisis volutpat nec non leo. Vivamus felis lacus, aliquet ut tempor non, dapibus eu nisl. Curabitur magna eros, consectetur molestie mi nec, dignissim varius velit. Mauris sit amet ligula a felis fringilla elementum sit amet sed odio. Integer efficitur velit sit amet dictum facilisis. Morbi aliquet, nulla eget gravida malesuada, metus purus dictum dolor, sed interdum ex leo vel risus. Nulla iaculis porta rutrum.</p>
+               <p>
+                Orange is a specialized orange farm located in Orange County, New York. During each season, an unique orange with special quality is produced from our farm. Although they are all unique in their qualities, we ganrantees that they are all big, juicy and perfect all around. 
+               </p>
                <img src="O4.jpeg"/>
         </div>
         
    
        </article>
+       <script>
+        function openNav() {
+          document.getElementById("orSidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("orSidenav").style.width = "0";
+        }
+        </script>
 </body>
 </html>
