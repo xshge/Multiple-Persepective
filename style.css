@@ -1,3 +1,8 @@
+body {
+    background-color: #E7BB41;
+}
+
+
 .grid{
     width:100vw;
     height:100vh;
@@ -26,7 +31,7 @@
 }
 header{
     
-    background-color: bisque;
+    background-color: #44BBA4;
     background-image: url("O3.jpeg");
     background-size: cover;
      background-repeat: no-repeat;
@@ -34,6 +39,8 @@ header{
     grid-area: hd;
     text-align: center;
     position:relative;
+    left:0;
+    right:0;
 }
 .headerContain {
     width:100%;
@@ -43,10 +50,10 @@ header{
 
 h1{
     font-size:60px;
-    color:azure;
+    color:#393E41;
     font-family:'Myriad Pro', sans-serif; ;
     /* padding-top: 15px; */
-    background-color:lightgray;
+    background-color:#D3D0CB;
     margin:0%;
     grid-area: h1;
     text-align: center;
@@ -61,7 +68,7 @@ a{
 }
 img{
     width:40%;
-   align-self: flex-end;
+   align-self: center;
     object-fit:contain;
     
 }
@@ -70,17 +77,18 @@ img{
     height: 100px;
     background-image:none;
     position:sticky;
-    top:5px;
+    top:0px;
 }
 .page{
     background-size: 120% auto;
     background-image: url(O3.jpeg);
     background-attachment: fixed;
-    background-blend-mode: soft-light;
-    background-color:lightgray;
+    background-blend-mode: lighten;
+    background-color:#E7BB41;
 
 }
 .container{
+    width:70%;
     display:flex;
     flex-direction:row;
     gap:150px;
@@ -88,11 +96,13 @@ img{
     margin: 15% 25% 15% 20%;
 }
 p{
-    background-color: aquamarine;
+    color:#393E41;
+    font-size:27px;
+    background-color:#E7E5DF;
     background-size: 200px;
     text-align: left;
     margin-top: 10px;
-    padding: 10%;
+    padding: 2% 12% 7% 5%;
 }
 .imageContainer{
     height:100vh;
@@ -130,6 +140,7 @@ p{
     top:0px;
     width:100%;
     grid-area: pri;
+    color:#252019;
 }
 .image{
     width:100%;
@@ -221,7 +232,7 @@ p{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: azure;
     overflow-x:hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -238,21 +249,28 @@ p{
   }
   
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: #252019;
   }
   
 .sidenav .closebtn {
-    color:azure;
+    color:#818181;
     position: absolute;
     top: 0;
     font-size: 36px;
     margin-left: 120px;
   }
 .openbtn {
-    font-size:60px;
-    color:azure;
+    font-size:70px;
+    color:#E7E5DF;
     font-weight:bold;
     position:absolute;
     top:10px;
-    left:15px;
+    left:35px;
+}
+.listContain {
+    display: flex;
+    flex-direction: column;
+    background-color:#E7E5DF;
+    font-size: 20px;
+    padding-right: 5%;
 }

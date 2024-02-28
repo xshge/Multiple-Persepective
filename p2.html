@@ -7,8 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="page">
+  <div id="orSidenav" class="sidenav">
+    <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="p1.html">Our Farm</a>
+    <a href="p3.html">Care Instruction</a>
+    <a href="p4.html">Shipping</a>
+    <a href="p5.html">Product</a>
+  </div>
     <article>
      <header> 
+      <span class="openbtn" onclick="openNav()">&#8801</span>
         <a href="index.html">
             <span>
                 <svg width= "201" height= "100"id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 547.37 211.98">
@@ -16,6 +24,7 @@
                       <style>
                         .cls-1 {
                           stroke-width: 0px;
+                          fill:#393E41;
                         }
                       </style>
                     </defs>
@@ -39,14 +48,24 @@
         </a>
     </header>
      <div class="container">
-            <p>blahblahLorem ipsum dolor sit amet,
-             consectetur adipiscing elit. Maecenas id 
-             leo id eros consectetur facilisis. Vestibulum vestibulum sapien id risus ultricies, at rutrum turpis malesuada. Nulla facilisi. Etiam vulputate aliquam lectus malesuada venenatis. Integer fringilla convallis convallis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis augue sem. Nunc non odio eget leo sagittis auctor nec quis enim. Maecenas consectetur nisl quis enim faucibus convallis. Donec sollicitudin eros non turpis facilisis volutpat nec non leo. Vivamus felis lacus, aliquet ut tempor non, dapibus eu nisl. Curabitur magna eros, consectetur molestie mi nec, dignissim varius velit. Mauris sit amet ligula a felis fringilla elementum sit amet sed odio. Integer efficitur velit sit amet dictum facilisis. Morbi aliquet, nulla eget gravida malesuada, metus purus dictum dolor, sed interdum ex leo vel risus. Nulla iaculis porta rutrum.</p>
+            
+            <p>We produce our Oranges with patience and precision.<br>
+              Our oranges get the utmost amount of nutrients from the soil and an abundance of sunlight.<br>
+              These care are all necessary in giving Bob's ability in granting summary feeling and granting you a better change at being a billionair in America.</p>
             <img src="O6.jpeg"/>
      </div>
      
 
     </article>
+    <script>
+      function openNav() {
+        document.getElementById("orSidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("orSidenav").style.width = "0";
+      }
+      </script>
     
 </body>
 </html>
