@@ -214,7 +214,7 @@ p{
     margin-block-start: 10px; 
 
 }
-@media only screen and (max-width:700px) {
+@media only screen and (max-width:900px) {
     .productWrap{
         display:grid;
         grid-template-columns: 1fr 40%;
@@ -223,6 +223,23 @@ p{
         "hd hd"
         "pr pri"
     
+    }
+    .container{
+        width:70%;
+        display:flex;
+        flex-direction:row;
+        gap:50px;
+        align-items:center;
+        margin: 15% 25% 15% 20%;
+    }
+    p{
+        color:#393E41;
+        font-size:17px;
+        background-color:#E7E5DF;
+        background-size: 200px;
+        text-align: left;
+        margin-top: 10px;
+        padding: 2% 12% 7% 5%;
     }
 }
 .sidenav {
